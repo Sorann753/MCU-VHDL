@@ -6,7 +6,7 @@ I will however try to keep everything as consistent as possible.
 
 ## Instruction format
 
-| X X | X X X X X X | 
+| X X | X X X X X X |
 | --- | --- |
 | OPCode | Data Bit |
 
