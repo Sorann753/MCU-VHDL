@@ -23,7 +23,7 @@ begin
     process(OPCODE)
         variable OPR : unsigned(7 downto 0);
     begin
-        OPR := OPCODE & "11000000";
+        OPR := OPCODE and "11000000";
 
         case(OPR) is
             when "00000000" =>

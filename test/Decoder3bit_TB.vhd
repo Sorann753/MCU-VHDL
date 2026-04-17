@@ -11,7 +11,7 @@ architecture TB of Decoder3bit_TB is
     
     signal Disable : std_logic := '0';
     signal BitIn : std_logic_vector(2 downto 0) := "000";
-    signal SelectOut : std_logic_vector(1 to 8);
+    signal SelectOut : std_logic_vector(7 downto 0);
 
 begin
 

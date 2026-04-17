@@ -6,7 +6,7 @@ entity Decoder3bit is
   port (
     Disable : in std_logic;
     BitIn : in std_logic_vector(2 downto 0) := "000";
-    SelectOut : out std_logic_vector(1 to 8) := "00000000"
+    SelectOut : out std_logic_vector(7 downto 0) := "00000000"
   );
 end Decoder3bit;
 
