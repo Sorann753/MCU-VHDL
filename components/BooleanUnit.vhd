@@ -21,7 +21,7 @@ begin
     process(Cond)
         variable choiceBit : unsigned(7 downto 0);
     begin
-        choiceBit := Cond & "00000111";
+        choiceBit := Cond and "00000111";
 
         case(choiceBit) is
             when "00000000" =>
@@ -59,17 +59,17 @@ begin
             when F =>
                 R <= '0';
             when C_EQ =>
-                R <= Value = 0;
+                R <= '1' when (Value = 0) else '0';
             when NEQ =>
-                R <= Value /= 0;
+                R <= '1' when (Value /= 0) else '0';
             when LS =>
-                R <= Value < 0;
+                R <= '1' when (Value < 0) else '0';
             when LEQ =>
-                R <= (Value <= 0);
+                R <= '1' when (Value <= 0) else '0';
             when GR =>
-                R <= Value > 0;
+                R <= '1' when (Value > 0) else '0';
             when GEQ =>
-                R <= (Value >= 0);
+                R <= '1' when (Value >= 0) else '0';
         
             -- weird case
             when others =>

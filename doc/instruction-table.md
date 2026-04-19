@@ -16,7 +16,7 @@ I will however try to keep everything as consistent as possible.
 |---|---|---| --- |
 | Load Const | `00` | `00DDDDDD` | takes the value from the data bits and place it in `R0` |
 | Calculate | `01` | `01???PPP` | compute `R1 OP R2` and place the result in `R3`, the operator is selected by the 3 lowest bit of the data bits |
-| Copy | `10` | `10SSSDDD` | Takes the value from one register and place it into another, the SRC is selected from the 3 higher bits of the data bist and the DEST is selected from the 3 lowest bits |
+| Copy | `10` | `10SSSDDD` | Takes the value from one register and place it into another, the SRC is selected from the 3 higher bits of the data bits and the DEST is selected from the 3 lowest bits |
 | Condition | `11` | `11???CCC` | Compare `R3` with `0`. if `True` is evaluated then the Program Counter jump to the address contained in `R0`. The type of condition is determined by the 3 lowest bit of the data bits |
 
 Note that for now, all instructions execute in a single clock cycle. As such you can consider that the execution time of your program is equal to the number of instructions execute

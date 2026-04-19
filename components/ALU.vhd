@@ -63,7 +63,7 @@ begin
     
       -- unimplemented operation
       when others =>
-        Res <= 0;
+        Res <= to_unsigned(0, 8);
     end case ;
   end process;
 

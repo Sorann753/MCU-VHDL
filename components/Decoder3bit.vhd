@@ -16,22 +16,24 @@ begin
     process(BitIn, Disable)
     begin
         case(to_integer(unsigned(BitIn))) is
-            when 1 =>
-                SelectOut <= "01000000";
-            when 2 =>
-                SelectOut <= "00100000";
-            when 3 =>
-                SelectOut <= "00010000";
-            when 4 =>
-                SelectOut <= "00001000";
-            when 5 =>
-                SelectOut <= "00000100";
-            when 6 =>
-                SelectOut <= "00000010";
-            when 7 =>
+            when 0 =>
                 SelectOut <= "00000001";
-            when others => -- weird case
+            when 1 =>
+                SelectOut <= "00000010";
+            when 2 =>
+                SelectOut <= "00000100";
+            when 3 =>
+                SelectOut <= "00001000";
+            when 4 =>
+                SelectOut <= "00010000";
+            when 5 =>
+                SelectOut <= "00100000";
+            when 6 =>
+                SelectOut <= "01000000";
+            when 7 =>
                 SelectOut <= "10000000";
+            when others => -- weird case, just disable
+                SelectOut <= "00000000";
         end case;
 
         if Disable = '1' then
