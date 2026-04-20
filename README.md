@@ -10,7 +10,7 @@ Then in march 2026 i started learning VHDL and i really love this language, so i
 
 ## Goals
 
-[ ] For now i'm just going to recreate a 1 to 1 version of the machine that i had made in the game (as bad as it may be).
+[X] For now i'm just going to recreate a 1 to 1 version of the machine that i had made in the game (as bad as it may be).
 
 [ ] After that, once it's working in test benches, i'll make my own custom Assembler and Bootloader in order to be able to program it once it's onto an actual FPGA.
 
